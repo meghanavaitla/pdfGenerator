@@ -1,0 +1,30 @@
+<div class="container">
+  <table id="table" class="table table-hover" *ngFor="let s of sample;">
+    <tr>
+      <th scope="col">Manuscript Number</th>
+      <td>{{s._id}}</td>
+    </tr>
+    <tr>
+      <th scope="col">Full Title</th>
+      <td>{{s.title}}</td>
+    </tr>
+    <tr>
+      <th scope="col">Article Type</th>
+      <td>{{s.articletype}}</td>
+    </tr>
+    <tr>
+      <th scope="col">Author's Institution</th>
+      <td>{{s.institution}}</td>
+    </tr>
+    <tr>
+      <th scope="col">Abstract</th>
+      <td>{{s.abstract}}</td>
+    </tr>
+    <tr>
+      <th scope="col">Funding Info</th>
+      <td>{{s.fundinginfo}}</td>
+    </tr>
+  </table>
+ <button class="btn btn primary" (click)="download()">Download pdf</button>
+</div>
+<router-outlet></router-outlet>
